@@ -37,7 +37,7 @@ router.post("/save_add.html", function (req, res, next) {
   list.content = content;
   list.time = new Date().toLocaleString();
   list.save(function () {
-    res.send("发布成功");
+    res.send('<script>alert("新增成功");location.href="/list.html"</script>');
   });
 });
 

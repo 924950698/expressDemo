@@ -7,22 +7,28 @@
     <title>Document</title>
   </head>
   <body>
+    
     <table>
       <tr>
         <td>标题</td>
         <td>内容</td>
         <td>时间</td>
+        <td><button>
+            <a href="/add.html">新增</a>
+        </button></td>
       </tr>
       <%for(var i in list){%>
       <tr>
         <td><%=list[i].title%></td>
         <td><%=list[i].content%></td>
         <td><%=list[i].time%></td>
-        <td><a href="/edit.html?id=<%=list[i]._id%>">修改</a> 
-            <a href="/del.html?id=<%=list[i]._id%>">删除</a></td>
+        <td>
+          <a href="/edit.html?id=<%=list[i]._id%>">修改</a>
+          <a href="/del.html?id=<%=list[i]._id%>">删除</a>
+
+        </td>
       </tr>
       <%}%>
     </table>
   </body>
 </html>
-
